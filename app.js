@@ -23,7 +23,6 @@ app.get('/', function (req, res) {
 
 
 app.post("/detail", (req, res) => {
-      // Crea un objeto de preferencia
     res.render('detail');
   });
 
