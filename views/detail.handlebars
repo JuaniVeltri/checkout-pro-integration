@@ -9,15 +9,18 @@
         <h2 class="title">Summary</h3>
         <div class="item">
            
-        <span class="price" id="summary-price"> {{!--  --}}</span>
-        <p class="item-name">Book x <span id="summary-quantity"> {{!--  --}}</span></p>
+        <span class="price" id="summary-price"> {{post.description}}</span>
+        <p class="item-name">Book x <span id="summary-quantity"> {{post.quantity}}</span></p>
         </div>
-        <div class="total">Total<span class="price" id="summary-total"> {{!--  --}}</span></div>
+        <div class="total">Total<span class="price" id="summary-total"> {{post.transactionAmount}}</span></div>
     </div>
     <div class="payment-details">
             <div class="form-group col-sm-12">
             <br>
-                   {{!-- checkout  --}}
+                  <script
+                    src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+                    data-preference-id={{post.id}}>
+                </script>
             <br>
             <a href="/" id="go-back">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 10 10" class="chevron-left">
