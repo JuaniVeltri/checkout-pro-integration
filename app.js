@@ -53,7 +53,6 @@ app.post("/detail", (req, res) => {
     }).catch(function(error){
       console.log(error);
     });
-    
   });
 
 app.listen(port);
